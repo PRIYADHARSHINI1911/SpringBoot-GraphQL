@@ -1,0 +1,24 @@
+type Student{
+  id: ID
+  name: String
+  department: Department
+}
+
+enum Department{
+  MECH
+  CSE
+  EEE
+  ECE
+  CIVIL
+}
+
+type Query{
+   findAll : [Student]
+   findOne(id: ID) : Student
+}
+
+type Mutation{
+   create(name: String, department: Department) : Student
+   update(id: ID, name: String, department: Department) : Student
+   delete(id: ID) : Student
+}

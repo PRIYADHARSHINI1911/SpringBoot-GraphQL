@@ -1,0 +1,5 @@
+com\example\graphql\model\Student.class
+com\example\graphql\controller\StudentController.class
+com\example\graphql\model\Department.class
+com\example\graphql\GraphqlApplication.class
+com\example\graphql\service\StudentService.class
