@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage("init") {
             steps {
-                echo "iniatilizing..."
-                }
+                echo "initializing..."
             }
         }
         stage("build") {
@@ -23,5 +22,4 @@ pipeline {
             }
         }
     }   
-
-
+}
