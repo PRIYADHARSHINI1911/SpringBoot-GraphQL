@@ -3,22 +3,22 @@ pipeline {
     stages {
         stage("init") {
             steps {
-                echo "...initializing"
+                echo "initializing..."
             }
         }
         stage("build") {
             steps {
-                echo "...initializing"
+                echo "building..."
             }
         }
         stage("test") {
             steps {
-                echo "...initializing"
+                echo "testing..."
             }
         }
         stage("deploy") {
             steps {
-                echo "...initializing"
+                echo "deploying..."
             }
         }
     }   
