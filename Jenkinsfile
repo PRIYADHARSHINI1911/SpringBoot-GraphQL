@@ -1,21 +1,31 @@
-pipeline{
-  agent any
-  stages{
-    stage("build")
-    steps{
-      echo "building...."
-    }
-  }
-  stages{
-    stage("test")
-    steps{
-       echo "testing...."
-    }
-  }
-  stages{
-    stage("deploy")
-    steps{
-       echo "deploying...."
-    }
-  }  
+pipeline {
+    agent any
+    stages {
+        stage("build") {
+            steps {
+                script {
+                    gv.buildApp()
+                }
+            }
+        }
+        stage("test") {
+            when {
+                expression {
+                    params.executeTests
+                }
+            }
+            steps {
+                script {
+                    gv.testApp()
+                }
+            }
+        }
+        stage("deploy") {
+            steps {
+                script {
+                    gv.deployApp()
+                }
+            }
+        }
+    }   
 }
